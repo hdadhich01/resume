@@ -1,0 +1,240 @@
+%-------------------------
+% Resume in Latex
+% Author : Jake Gutierrez
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{xcolor}
+\usepackage{graphicx}
+\usepackage{tikz}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+%----------HEADING----------
+\begin{tikzpicture}[overlay, remember picture]
+	\node[xshift=-11mm,yshift=-11mm] at (current page.north east) {\href{https://qr.ly/46vz}{\includegraphics[height=40px]{qr-code.png}}};
+\end{tikzpicture}
+
+\begin{center}
+	{\Huge \scshape Harsh Dadhich} \\ \vspace{1pt}
+	Mountain House, CA 95391 \\ \vspace{1pt}
+	\href{mailto:hdadhich01@gmail.com}{\includegraphics[height=9pt]{google-mail.png}} \href{https://linkedin.com/in/hdadhich01}{\faLinkedin} \href{https://github.com/hdadhich01}{\faGithub} hdadhich01 $|$ \href{tel:+12096371007}{\small \raisebox{-0.1\height}\faPhone{ +1 (209) 637-1007}}
+	% \href{tel:+12096371007}{\small \raisebox{-0.1\height}\faPhone\ \underline{+1 (209) 637-1007}} ~ \href{mailto:hdadhich01@gmail.com}{\raisebox{-0.2\height}\faGoogle\  \underline{hdadhich01}} ~
+	% \href{https://linkedin.com/in/hdadhich01}{\raisebox{-0.2\height}\faLinkedin\ \underline{hdadhich01}}  ~
+	% \href{https://github.com/}{\raisebox{-0.2\height}\faGithub\ \underline{hdadhich01}}
+	\vspace{-15pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{Education}
+\resumeSubHeadingListStart
+\resumeSubheading
+{University of California, Santa Cruz}{Santa Cruz, CA}
+{Bachelor of Science: Computer Science}{Sept. 2022 - June 2026}
+\begin{itemize}[itemsep=-1pt, parsep=1pt]
+	\item\small \textbf{GPA}{: 4.00}
+	\item \textbf{Relevant Coursework}{: Prog Abs: Python -- Com Sys/Assmbly Lan}
+\end{itemize}
+\resumeSubheading
+{Dougherty Valley High School}{San Ramon, CA}
+{Diploma \textbf{--} Graduated with Honors}{Aug. 2018 - June 2022}
+\begin{itemize}[itemsep=-1pt, parsep=1pt]
+	\item\small \textbf{UC GPA}{: 4.29}
+	\item \textbf{Relevant Coursework}{: AP Calc AB -- AP CS A - Calculus II -- AP Mech -- AP Stats}
+\end{itemize}
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+{Ossisto}{July -- Sept. 2021}
+{Web Development Intern}{Remote}
+\resumeItemListStart
+\resumeItem{Learned web development skills through HTML/CSS, JavaScript, and UI/UX flowcharts.}
+\resumeItem{Helped visualize and enter catalog data for an informational panel on a site endpoint.}
+\resumeItemListEnd
+
+\resumeSubheading
+{San Ramon Virtual Tutors}{June 2020 - June 2021}
+{Co-Founder and Tutor}{San Ramon, CA}
+\resumeItemListStart
+\resumeItem{Helped lead logistics to set up our non-profit tutoring organization during COVID-19 remote instruction.}
+\resumeItem{Tutored middle/secondary school students in programming and mathematics in preparation for virtual exams.}
+\resumeItemListEnd
+
+\resumeSubheading
+{ACE Virtual Learning}{Nov. 2019 -- March 2020}
+{Content Creator and Marketer}{San Ramon, CA}
+\resumeItemListStart
+\resumeItem{Generated content centered around the gifted program entrance aptitude CogAT\textsuperscript{\textregistered} test to assist students K-5.}
+\resumeItem{Designed and led marketing to receive clients around popular gifted program institutions in CA, TX, and WA.}
+\resumeItemListEnd
+
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+\vspace{-5pt}
+\resumeSubHeadingListStart
+\resumeProjectHeading
+{\textbf{\color[HTML]{0000EE}\href{https://pypi.org/project/round-nutrition}{round-nutrition}} $|$ \emph{Python, GitHub Actions, PyPI}}{July 2022}
+\resumeItemListStart
+\resumeItem{Developed a package to round raw values produced by specialists and manufacturers to meet federal compliance standards set by the FDA and NDC. 6,000+ downloads with in-progress nutrient recommendation calculator.}
+\resumeItemListEnd
+\vspace{-13pt}
+\resumeProjectHeading
+{\textbf{\color[HTML]{0000EE}\href{https://api.slug.tools}{SlugTools}} $|$ \emph{Python, BeautifulSoup, Deta, Flask}}{May 2022}
+\resumeItemListStart
+\resumeItem{Created an organization of web applications for UCSC backed by a RESTful API for university services.}
+\resumeItem{Processed scraped data from multiple university endpoints through BeautifulSoup to relay and store in Deta Cloud.}
+\resumeItem{Utilized Flask to serve data endpoints catering to catalog instructor, classroom, and textbook searching; food locations, menus, and wait times; residential laundry and other services.}
+\resumeItemListEnd
+\vspace{-13pt}
+\resumeProjectHeading
+{\textbf{\color[HTML]{0000EE}\href{https://github.com/hdadhich01/Albert}{Albert}} $|$ \emph{Python, discord.py, Pillow}}{October 2020}
+\resumeItemListStart
+\resumeItem{Designed a social media integration for my local academic community with music display, trivia, weather querying, etc.}
+\resumeItem{Updated during COVID-19 remote instruction to include document/image scanning, reminders, and schedule alerts.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------EXTRACURRICULAR---------------
+\section{Extracurricular}
+\resumeSubHeadingListStart
+\resumeSubheading{Sun Valley Animal Hospital}{July - Aug. 2021}{Volunteer Assistant}{Pleasant Hill, CA}
+\resumeItemListStart
+\resumeItem{Assisted veterinarians and other medical personnel in the pharmacy and operating theatre.}
+\resumeItemListEnd
+\resumeSubheading{Deloitte Team Tech Challenge}{June 2021}{$1^{st}$ Place Winner for Education}{Remote}
+\resumeSubheading{Programming Workshop}{August 2020}{Host/Organizer}{Clever Code}
+\resumeItemListStart
+\resumeItem{Hosted a introductory Python programming workshop on behalf of Clever Code with international participance.}
+\resumeItem{Kickstarted participants' ideas by providing templates/resources and feedback on working/finished implementations.}
+\resumeItemListEnd
+\resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------SKILLS-----------
+\section{Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+	\small{\item{
+		            \textbf{Languages}{: Python, C++, Java, HTML/CSS, \LaTeX} \\
+		            \textbf{Tools}{: VS Code, Vim, PuTTY/WinSCP, Git/GitHub/GitKraken, WSL/UNIX} \\
+		            \textbf{Platforms}{: Cloudflare, Digital Ocean, Deta, Heroku, Oracle Cloud, PyPI} \\
+		            \textbf{Frameworks}{: BeautifulSoup, discord.py, FastAPI, Flask/Quart} \\
+		      }}
+\end{itemize}
+
+\end{document}

@@ -147,6 +147,9 @@ acs-*.bib
 # *.tikz
 *-tikzDictionary
 
+# latexindent
+*.bak*
+
 # listings
 *.lol
 

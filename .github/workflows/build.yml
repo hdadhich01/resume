@@ -1,29 +1,27 @@
-# With some help from: https://gist.github.com/dgerosa/2e1f47a39180f39bde848e38243efa94
-
 name: build
 on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      # Edit here with the names of your latex file and directory (can use ".")
       DIR: .
-      FILE: latest
+      FILE: resume
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v3
-      - name: cv
+      - name: resume
         uses: xu-cheng/latex-action@v2
         with:
           root_file: ${{ env.FILE }}
           working_directory: ${{ env.DIR }}
       - name: move
-        run: mkdir -p github_artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./github_artifacts/
+        run: mkdir -p artifacts && mv ${{ env.DIR }}/${{ env.FILE }}.pdf ./artifacts/
       - name: Upload pdf as artifact
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: ${{ env.FILE }}.pdf
-          path: ./github_artifacts
+          path: ./artifacts
+
   deploy:
     needs: [build]
     runs-on: ubuntu-latest
@@ -32,14 +30,14 @@ jobs:
         uses: actions/checkout@v3
       - uses: actions/download-artifact@v3
         with:
-          path: github_artifacts
+          path: artifacts
       - name: move
-        run: mkdir -p github_deploy && mv github_artifacts/*/* github_deploy
+        run: mkdir -p deploy && mv artifacts/*/* deploy
       - name: deploy on orphan branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./github_deploy
+          publish_dir: ./deploy
           publish_branch: build
           force_orphan: true
           enable_jekyll: true

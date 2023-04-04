@@ -47,11 +47,11 @@
 \renewcommand{\footrulewidth}{0pt}
 
 % Adjust margins
-\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
-\addtolength{\textwidth}{1.19in}
-\addtolength{\topmargin}{-.7in}
-\addtolength{\textheight}{1.4in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-0.5in}
+\addtolength{\textheight}{1.0in}
 
 \urlstyle{same}
 
@@ -61,7 +61,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large\bfseries
+  \vspace{-4pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -75,16 +75,10 @@
   }
 }
 
-\newcommand{\classesList}[4]{
-    \item\small{
-        {#1 #2 #3 #4 \vspace{-2pt}}
-  }
-}
-
 \newcommand{\resumeSubheading}[4]{
   \vspace{-2pt}\item
-    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & \textbf{\small #2} \\
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
       \textit{\small#3} & \textit{\small #4} \\
     \end{tabular*}\vspace{-7pt}
 }
@@ -98,17 +92,16 @@
 
 \newcommand{\resumeProjectHeading}[2]{
     \item
-    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & \textbf{\small #2}\\
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & #2 \\
     \end{tabular*}\vspace{-7pt}
 }
 
 \newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
 
-\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
 \renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
 
-\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
 \newcommand{\resumeItemListStart}{\begin{itemize}}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
@@ -116,15 +109,21 @@
 %-------------------------------------------
 %%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+
 \begin{document}
 %----------HEADING----------
 \begin{tikzpicture}[overlay, remember picture]
 	\node[xshift=-10mm,yshift=-10mm] at (current page.north east) {\href{https://scanqr.to/ab08e949}{\includegraphics[height=35px]{qr-code.png}}};
 \end{tikzpicture}
 
+\vspace{-15pt}
 \begin{center}
-	{\Huge \scshape Harsh Dadhich} \\ \vspace{1pt}
-	Mountain House, CA $|$ \color[HTML]{0000EE}\href{mailto:hdadhich01@gmail.com}{\faEnvelope~{hdadhich01@gmail.com}} \textcolor{black}{$|$} \color[HTML]{0000EE}\href{tel:+12096371007}{\small \raisebox{-0.1\height}\faPhone~{(209) 637-1007}} \textcolor{black}{$|$} \color[HTML]{0000EE}\href{https://www.linkedin.com/in/hdadhich01/}{\faLinkedin~{hdadhich01}} \textcolor{black}{$|$} \color[HTML]{0000EE}\href{https://github.com/hdadhich01}{\faGithub~{hdadhich01}}
+	\textbf{\Huge \scshape Harsh Dadhich} \\ \vspace{1pt}
+	\small Mountain House, CA $|$
+	\color[HTML]{0000EE}\href{https://harshdadhich.com/}{\faGlobe~{harshdadhich.com}} \textcolor{black}{$|$}
+	\color[HTML]{0000EE}\href{mailto:me@harshdadhich.com}{\faEnvelope~{me@harshdadhich.com}} \textcolor{black}{$|$}
+	\color[HTML]{0000EE}\href{tel:+12096371007}{\small \raisebox{-0.1\height}\faPhone~{(209) 637-1007}} \textcolor{black}{$|$}
+	\color[HTML]{0000EE}\href{https://www.linkedin.com/in/hdadhich01/}{\faLinkedin} \href{https://github.com/hdadhich01}{\faGithub} \textcolor{black}{hdadhich01}
 	% \href{tel:+12096371007}{\small \raisebox{-0.1\height}\faPhone\ \underline{+1 (209) 637-1007}} ~ \href{mailto:hdadhich01@gmail.com}{\raisebox{-0.2\height}\faGoogle\  \underline{hdadhich01}} ~
 	% \href{https://linkedin.com/in/hdadhich01}{\raisebox{-0.2\height}\faLinkedin\ \underline{hdadhich01}}  ~
 	% \href{https://github.com/}{\raisebox{-0.2\height}\faGithub\ \underline{hdadhich01}}
@@ -139,8 +138,7 @@
 {University of California, Santa Cruz}{Sep 2022 -- June 2025}
 {Bachelor of Science: Computer Science}{Santa Cruz, CA}
 \begin{itemize}[itemsep=-1pt, parsep=1pt]
-	\item\small \textbf{GPA}{: 4.0}
-	\item \textbf{Coursework}{: Programming Abstractions: Python, Computer Systems and Assembly Language, Linear Algebra}
+	\item\small \textbf{GPA}{: 4.0} --- \textbf{Awards}{: Dean's Honors List: Fall 2022, Spring 2023} -- \textbf{Coursework}{:  Prog Abs: Python,  Com Sys/Assmbly Lan, FoundationsGameDesgn,  Comp Sys and C Prog, Appl Discrete Math, Vector Calculus}
 \end{itemize}
 
 \resumeSubHeadingListEnd
@@ -150,10 +148,10 @@
 \section{Skills}
 \begin{itemize}[leftmargin=0.15in, label={}]
 	\small{\item{
-		            \textbf{Languages}{: Python, C\texttt{++}, Java, HTML/CSS, \LaTeX} \\
-		            \textbf{Tools}{: Canva, Google Workspace, MS Office, Git, PuTTY, WinSCP, WSL, Unix} \\
-		            \textbf{Platforms}{: Cloudflare, Digital Ocean, Deta, Heroku, Oracle Cloud, PyPI} \\
-		            \textbf{Frameworks}{: BeautifulSoup, discord.py, FastAPI, Flask, Quart} \\
+		            \textbf{Languages}{: Python, C/C\texttt{++}, Java, JavaScript, HTML/CSS, Markdown, \LaTeX} \\
+		            \textbf{Tools}{: Canva, Google Workspace, MS Office, Git, PuTTY, WinSCP, Ubuntu Linux} \\
+		            \textbf{Libraries}{: Angular, BeautifulSoup, discord.py, Django, Flask} \\
+		            \textbf{Platforms}{: AWS, Cloudflare, Digital Ocean, GitHub, Heroku, Oracle Cloud, PyPI} \\
 		      }}
 \end{itemize}
 \vspace{-15pt}
@@ -191,7 +189,6 @@
 
 %-----------PROJECTS-----------
 \section{Projects}
-\vspace{-5pt}
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
@@ -201,21 +198,20 @@
 \resumeItem{Received \textbf{7,000+ downloads} and working to integrate a dietary calculator with different meal plans}
 \resumeItemListEnd
 
-\vspace{-15pt}
+\vspace{-2pt}
 \resumeProjectHeading
 {\textbf{\color[HTML]{0000EE}\href{https://api.slug.tools}{SlugTools}} $|$ \emph{Python, BeautifulSoup, Deta, Flask}}{May 2022}
 \resumeItemListStart
-\resumeItem{Produced a \textbf{RESTful} web application for \textbf{UC Santa Cruz} to deliver organized data catering to university services}
-\resumeItem{Processed scraped data from multiple  endpoints through BeautifulSoup to relay and store in Deta Cloud}
-\resumeItem{Utilized Flask to serve data endpoints catering to \textbf{catalog} instructor, classroom, and textbook searching; \textbf{food} locations, menus, and wait times; \textbf{residential} laundry and other services}
+\resumeItem{Produced a live \textbf{RESTful API} to deliver scraped and organized data catering to my \textbf{university's services} for instructional catalog, dining, laundry, and other utilities}
+\resumeItem{Parsed scraped data from multiple endpoints through BeautifulSoup to relay and store in a remote database}
 \resumeItemListEnd
 
-\vspace{-15pt}
+\vspace{-2pt}
 \resumeProjectHeading
 {\textbf{\color[HTML]{0000EE}\href{https://github.com/hdadhich01/Albert}{Albert}} $|$ \emph{Python, discord.py, Pillow}}{October 2020}
 \resumeItemListStart
-\resumeItem{Tailored a social media integration to my local academic community with music display, trivia, weather querying, etc}
-\resumeItem{Updated for COVID-19 remote instruction to include \textbf{document/image processing}, reminders, and schedule alerts}
+\resumeItem{Tailored a social media app to my local academic community with music display, trivia, weather querying, etc}
+\resumeItem{Updated during remote instruction to incorporate productivity with \textbf{media processing}, reminders, and alerts}
 \resumeItemListEnd
 
 \resumeSubHeadingListEnd
@@ -223,21 +219,31 @@
 
 %-----------EXTRACURRICULAR---------------
 \section{Extracurricular}
+% \resumeSubHeadingListStart
+% \resumeSubheading{Sun Valley Animal Hospital}{Jul 2021 -- Aug 2021}{Volunteer Assistant}{Pleasant Hill, CA}
+% \resumeItemListStart
+% \resumeItem{Assisted medical personnel through pharmaceutical inventory management and scheduling software}
+% \resumeItemListEnd
+
 \resumeSubHeadingListStart
-\resumeSubheading{Sun Valley Animal Hospital}{Jul 2021 -- Aug 2021}{Volunteer Assistant}{Pleasant Hill, CA}
+\resumeSubheading{CompSciLib}{Mar 2023 -- current}{Technical Community Manager}{Wilmington, DE}
 \resumeItemListStart
-\resumeItem{Assisted medical personnel through pharmaceutical inventory management and scheduling software}
+\resumeItem{Facilitated the growth of a \textbf{5,000+ member} community of computer science students and professionals}
+\resumeItem{Curated and delivered impactful resources from job/internship opportunities to supplemental learning materials}
 \resumeItemListEnd
-\resumeSubheading{Deloitte Team Tech Challenge}{June 2021}{$1^{st}$ Place Winner for Education}{Remote}
+
+\resumeSubheading{Deloitte Team Tech Challenge}{June 2021}{$1^{st}$ Place for Education}{Remote}
 \resumeItemListStart
 \resumeItem{Competed with teammates in an innovation ideation challenge and addressed educational funding inequality}
 \resumeItem{Proposed a design for a database system to help schools cost-effectively manage resources and student data}
 \resumeItemListEnd
 \resumeSubheading{Programming Workshop}{August 2020}{Host/Organizer}{Remote}
 \resumeItemListStart
-\resumeItem{Hosted an introductory Python programming workshop on behalf of Clever Code with international participance}
-\resumeItem{Kickstarted participants' ideas by providing templates/resources and feedback on working/finished implementations}
+
+\resumeItem{Hosted an introductory Python programming workshop with international participance teaching fundamental skills}
+\resumeItem{Kickstarted participants' ideas by providing templates/resources and feedback on drafted implementations}
 \resumeItemListEnd
+
 \resumeSubHeadingListEnd
 \vspace{-10pt}
 

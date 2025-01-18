@@ -9,6 +9,8 @@ jobs:
     steps:
       - name: Set up Git repository
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all branches, including `archive`
 
       - name: Build with latex-action
         uses: dante-ev/latex-action@latest
@@ -54,13 +56,19 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout archive branch or create it cleanly
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0 # Fetch all branches
+
+      - name: Switch to archive branch or create new
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
-          git fetch origin archive || echo "No archive branch yet"
+          git fetch origin archive || echo "No archive branch exists yet"
           git checkout archive || git checkout --orphan archive
-          rm -rf *  # Clear all files in the branch to ensure it is clean
-          git reset --hard
+          if [ "$(git rev-parse --is-inside-work-tree 2>/dev/null)" == "true" ]; then
+            rm -rf *  # Clean branch if it exists
+          fi
 
       - name: Download artifact
         uses: actions/download-artifact@v4
@@ -77,5 +85,5 @@ jobs:
       - name: Commit and push to archive branch
         run: |
           git add *.pdf
-          git commit -m "Add resume_${{ env.DATETIME }}.pdf"
+          git commit -m "Add resume_${{ env.DATETIME }}.pdf" || echo "No changes to commit"
           git push origin archive

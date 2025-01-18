@@ -66,14 +66,18 @@ jobs:
         run: echo "DATETIME=$(date +'%d%m%y_%H%M')" >> $GITHUB_ENV
 
       - name: Rename PDF with date and time
-        run: mv artifacts/*/*.pdf artifacts/resume_${{ env.DATETIME }}.pdf
+        run: mv artifacts/*/*.pdf resume_${{ env.DATETIME }}.pdf
+
+      - name: Allow files in .gitignore
+        run: |
+          echo "!*.pdf" >> .gitignore
 
       - name: Commit and push to archive branch
         run: |
           git config user.name "GitHub Actions"
           git config user.email "actions@github.com"
           git checkout archive || git checkout --orphan archive
-          mv artifacts/*.pdf .
-          git add *.pdf
+          mv resume_*.pdf .
+          git add -f *.pdf
           git commit -m "Add resume_${{ env.DATETIME }}.pdf"
           git push origin archive --force

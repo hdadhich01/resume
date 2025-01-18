@@ -44,6 +44,11 @@ jobs:
       - name: Rename PDF with date and time
         run: mv artifacts/*/*.pdf artifacts/resume_${{ env.DATETIME }}.pdf
 
+      - name: Allow archive folder in git
+        run: |
+          echo "!archive/" >> .gitignore
+          echo "!archive/*.pdf" >> .gitignore
+
       - name: Commit and push to archive branch
         run: |
           git config user.name "GitHub Actions"
@@ -51,6 +56,6 @@ jobs:
           git checkout archive || git checkout --orphan archive
           mkdir -p archive
           mv artifacts/*.pdf archive/
-          git add archive/*.pdf
+          git add -f archive/*.pdf
           git commit -m "Add resume_${{ env.DATETIME }}.pdf"
           git push origin archive --force

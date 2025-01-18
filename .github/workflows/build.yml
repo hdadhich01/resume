@@ -25,30 +25,6 @@ jobs:
           name: ${{ env.FILE }}.pdf
           path: ./artifacts
 
-  deploy:
-    needs: [build]
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Download artifact
-        uses: actions/download-artifact@v4
-        with:
-          path: artifacts
-
-      - name: Move artifact for deployment
-        run: mkdir -p deploy && mv artifacts/*/* deploy
-
-      - name: Deploy on orphan branch
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./deploy
-          publish_branch: deploy
-          force_orphan: true
-          enable_jekyll: true
-
   archive:
     needs: [build]
     runs-on: ubuntu-latest
@@ -63,10 +39,10 @@ jobs:
 
       - name: Format date and time for filename
         id: datetime
-        run: echo "::set-output name=datetime::$(date +'%d%m%y_%H%M')"
+        run: echo "DATETIME=$(date +'%d%m%y_%H%M')" >> $GITHUB_ENV
 
       - name: Rename PDF with date and time
-        run: mv artifacts/*/*.pdf artifacts/resume_${{ steps.datetime.outputs.datetime }}.pdf
+        run: mv artifacts/*/*.pdf artifacts/resume_${{ env.DATETIME }}.pdf
 
       - name: Commit and push to archive branch
         run: |
@@ -75,6 +51,6 @@ jobs:
           git checkout archive || git checkout --orphan archive
           mkdir -p archive
           mv artifacts/*.pdf archive/
-          git add archive/
-          git commit -m "Add resume_${{ steps.datetime.outputs.datetime }}.pdf"
-          git push origin archive
+          git add archive/*.pdf
+          git commit -m "Add resume_${{ env.DATETIME }}.pdf"
+          git push origin archive --force

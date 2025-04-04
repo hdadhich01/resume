@@ -29,6 +29,8 @@
 
 
 %----------FONT OPTIONS----------
+\usepackage{lmodern}  % Latin Modern, an enhanced version of Computer Modern
+\usepackage[T1]{fontenc}  % Better font encoding for Computer Modern
 % sans-serif
 % \usepackage[sfdefault]{FiraSans}
 \usepackage[sfdefault]{roboto}
@@ -61,7 +63,7 @@
 
 % Sections formatting
 \titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
+  \vspace{-4pt}\scshape\raggedright\large\color[RGB]{0,0,128}
 }{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -118,12 +120,12 @@
 
 \vspace{-15pt}
 \begin{center}
-  \textbf{\Huge \scshape Harsh Dadhich} \\ \vspace{1pt}
+  \textbf{\Huge \scshape \color[HTML]{000080}{Harsh Dadhich}} \\ \vspace{1pt}
   \small Tracy, CA $|$
-  \color[HTML]{0000EE}\href{mailto:me@harshdadhich.com}{me@harshdadhich.com} \textcolor{black}{$|$}
-  \color[HTML]{0000EE}\href{tel:+12096371007}{\small \raisebox{-0.1\height}{(209) 637-1007}} \textcolor{black}{$|$}
-  \color[HTML]{0000EE}\href{https://www.linkedin.com/in/hdadhich01/}{\faLinkedin~hdadhich01} \textcolor{black}{$|$}
-  \color[HTML]{0000EE}\href{https://github.com/hdadhich01}{\faGithub~hdadhich01}
+  \href{mailto:me@harshdadhich.com}{\color[HTML]{000080}{\faEnvelope}~\color[HTML]{000000}\underline{me@harshdadhich.com}} $|$
+  \href{tel:+12090000000}{\color[HTML]{000080}{\faPhone}~\color[HTML]{000000}\underline{(209) XXX-XXXX}} $|$
+  \href{https://www.linkedin.com/in/hdadhich01/}{\color[HTML]{000080}{\faLinkedin}~\color[HTML]{000000}\underline{hdadhich01}} $|$
+  \href{https://github.com/hdadhich01}{\color[HTML]{000080}{\faGithub}~\color[HTML]{000000}\underline{hdadhich01}}
   \vspace{-15pt}
 \end{center}
 
@@ -132,19 +134,37 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
+{Graduate School}{Incoming Fall 2025}
+{Master's of Science / Master's of Engineering}{City, CA}
+% \begin{itemize}[itemsep=-1pt, parsep=1pt]
+%   \item\small \textbf{Coursework}{: Computer Systems, Data Structures \& Algorithms, Computer Architecture, Applied Discrete, Calculus, Machine Learning, Linear Algebra, Algorithm Analysis, Prog Lang Foundations, Artificial Intelligence}
+% \end{itemize}
+
+\vspace{5pt}
+
+\resumeSubheading
 {University of California, Santa Cruz}{Sep 2022 -- Jun 2025}
-{Bachelor of Science: Computer Science}{Santa Cruz, CA}
+{Bachelor's of Science: Computer Science}{Santa Cruz, CA}
 \begin{itemize}[itemsep=-1pt, parsep=1pt]
-  \item\small \textbf{GPA}{: 3.75} | \textbf{Awards}{: Dean's Honors List (x2), Chancellor's Undergraduate Internship Program}
-  \item\small \textbf{Coursework}{: Computer Systems, Data Structures \& Algorithms, Computer Architecture, Applied Discrete, Calculus, Machine Learning, Linear Algebra, Algorithm Analysis, Prog Lang Foundations, Artificial Intelligence}
+  \item\small \textbf{GPA}{: 3.75} | \textbf{Awards}{: Dean's Honors List, Chancellor's Undergraduate Internship Program}
+  \item\small \textbf{Coursework}{: Computer Systems \& Architecture, Data Structures \& Algorithms, Machine Learning, Functional Prog}
 \end{itemize}
 
 \resumeSubHeadingListEnd
 \vspace{-15pt}
 
 %-----------EXPERIENCE-----------
-\section{Experience}
+\section{Professional Experience}
 \resumeSubHeadingListStart
+
+\resumeSubheading
+{Dento AI}{Oct 2024 -- Current}
+{Software Engineer Intern}{San Francisco, CA}
+\resumeItemListStart
+\resumeItem{Conducted research to optimize a clinical consultation AI by reducing latency through client-side audio streaming}
+\resumeItem{Achieved a \textbf{22x} server-side speedup with bulk transcription processing through Deepgram and multi-threading}
+\resumeItem{Engineered a Django ORM script and pitched to lead engineers to address data retention policies with PostgreSQL}
+\resumeItemListEnd
 
 \resumeSubheading
 {Intuitive Surgical}{Jun 2024 -- Sep 2024}
@@ -159,20 +179,20 @@
 {CITRIS and the Banatao Institute}{May 2024 -- Jul 2024}
 {Data Scientist Intern}{Berkeley, CA}
 \resumeItemListStart
-\resumeItem{Benchmarking and developing LLM tests on a nuclear energy project for an AI/ML Analytics B2B (\color[HTML]{0000EE}\href{https://beyondthearc.com}{Beyond the Arc})}
+\resumeItem{Benchmarking and developing LLM tests on a nuclear energy project for an AI/ML Analytics B2B (\href{https://beyondthearc.com}{\underline{Beyond the Arc}})}
 \resumeItem{Tailored web application to produce a \textbf{45\%} increase in efficiency for analyzing regulatory guideline documents}
 \resumeItem{Conducting text mining and chunking for RAG in a Generative AI project along with NLP on technical documents}
 \resumeItemListEnd
 
-\resumeSubheading
-{UCSC Genomics Institute}{Apr 2024 -- Current}
-{Undergraduate Research Assistant}{Santa Cruz, CA}
-\resumeItemListStart
-\resumeItem{Curated functional code developing artificial/observed datasets through simulating extracellular recordings}
-\resumeItem{Mentored by Dr. Mircea Teodorescu and compared datasets for a {\textbf{25\%}} increase in neural spike-sorting accuracy}
-\resumeItem{Leveraged lab AWS S3 buckets and Nautilus clusters with Python for data storage, processing, and analysis}
-\resumeItem{Formulated schemas for an autonomous agent framework to execute IoT-based wet lab experiments with LLMs}
-\resumeItemListEnd
+% \resumeSubheading
+% {UCSC Genomics Institute}{Apr 2024 -- Current}
+% {Undergraduate Research Assistant}{Santa Cruz, CA}
+% \resumeItemListStart
+% \resumeItem{Curated functional code developing artificial/observed datasets through simulating extracellular recordings}
+% \resumeItem{Mentored by Dr. Mircea Teodorescu and compared datasets for a {\textbf{25\%}} increase in neural spike-sorting accuracy}
+% \resumeItem{Leveraged lab AWS S3 buckets and Nautilus clusters with Python for data storage, processing, and analysis}
+% \resumeItem{Formulated schemas for an autonomous agent framework to execute IoT-based wet lab experiments with LLMs}
+% \resumeItemListEnd
 
 \resumeSubHeadingListEnd
 \vspace{-10pt}
@@ -182,15 +202,17 @@
 \resumeSubHeadingListStart
 
 \resumeProjectHeading
-{\textbf{\color[HTML]{0000EE}\href{https://pypi.org/project/round-nutrition/}{round-nutrition}} $|$ \emph{Python, GitHub Actions, CI/CD}}{July 2022}
+{\textbf{\color[HTML]{000000}\href{https://pypi.org/project/round-nutrition/}{\textcolor{black}{\faGithub}~\underline{round-nutrition -- FDA Compliant Nutritional Rounding Package}}} $|$ \emph{PyPI, Docker, GitHub Actions}}{July 2022}
+\vspace{2pt}
 \resumeItemListStart
-\resumeItem{Developed a package to round nutritional value data to meet federal standards and regulations}
-\resumeItem{Received \textbf{15k+ downloads} from popular projects for use in nutritional interfaces and calculators}
+\resumeItem{Shipped a package to round nutritional value data to meet federal standards and regulations (FDA, USDA, NDC)}
+\resumeItem{Received \textbf{18k+ downloads} from popular projects for use in nutritional interfaces and calculators}
 \resumeItemListEnd
 
 \vspace{-2pt}
 \resumeProjectHeading
-{\textbf{\color[HTML]{0000EE}\href{https://api.slug.tools}{SlugTools}} $|$ \emph{Python, TypeScript, BeautifulSoup, Flask}}{May 2022}
+{\textbf{\color[HTML]{000000}\href{https://api.slug.tools}{\textcolor{black}{\faGithub}~\underline{SlugTools -- REST API for Aggregated University Data}}} $|$ \emph{Flask + Quart, BeautifulSoup, Gunicorn}}{May 2022}
+\vspace{2pt}
 \resumeItemListStart
 \resumeItem{Deployed a RESTful API on parsed/scraped university data for course catalog, dining, and facility services}
 \resumeItem{Streamlined deployment and improved server resource usage by \textbf{20\%} with CI/CD and periodic scraping}
@@ -198,7 +220,8 @@
 
 \vspace{-2pt}
 \resumeProjectHeading
-{\textbf{\color[HTML]{0000EE}\href{https://github.com/hdadhich01/Albert}{Albert}} $|$ \emph{Python, discord.py, PIL (NumPy, Pandas)}}{October 2020}
+{\textbf{\color[HTML]{000000}\href{https://github.com/hdadhich01/Albert}{\textcolor{black}{\faGithub}~\underline{Albert -- Social Media Bot for Academic Community}}} $|$ \emph{discord.py, PIL, NumPy, Pandas}}{October 2020}
+\vspace{2pt}
 \resumeItemListStart
 \resumeItem{Tailored a social media app to my local academic community with music display, trivia, weather querying, etc}
 \resumeItem{Increased peer community productivity by \textbf{35\%} with features such as media processing, reminders, and alerts}

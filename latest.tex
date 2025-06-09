@@ -147,7 +147,7 @@
 {Bachelor of Science: Computer Science}{Santa Cruz, CA}
 \begin{itemize}[itemsep=-1pt, parsep=1pt]
   \item\small \textbf{Involvement}{: Google DSC, Delta Sigma Pi} -- \textbf{Awards}{: Dean's Honors, Chancellor's Internship Program}
-  \item\small \textbf{Coursework}{: Computer Systems \& Architecture, Data Structures \& Algorithms, Deep Learning, Functional Prog, Computer Networks, Discrete Math, Linear Algebra}
+  \item\small \textbf{Coursework}{: Data Structures \& Algorithms, Computer Systems \& Architecture, Applied Machine Learning, Functional Prog, Computer Networks, Web Applications, Probability, Discrete Math, Linear Algebra}
 \end{itemize}
 
 \resumeSubHeadingListEnd
@@ -161,38 +161,37 @@
 {Dento AI}{Oct 2024 -- Current}
 {Software Engineer Intern}{San Francisco, CA}
 \resumeItemListStart
-\resumeItem{Conducted research to optimize a clinical consultation AI by reducing latency through client-side audio streaming}
-\resumeItem{Achieved a \textbf{22x} server-side speedup with bulk transcription processing through Deepgram and multi-threading}
-\resumeItem{Engineered a Django ORM script with PostgreSQL partitioning to pitch a solution to address data retention policies}
+\resumeItem{Reduced consultation latency by \textbf{35\%} through client-side audio streaming, enabling real-time transcripts in \textbf{$\leq$ 1s}}
+\resumeItem{Achieved a \textbf{22x} server-side speedup with bulk transcription processing through \textbf{Deepgram} and multi-threading}
+\resumeItem{Implemented a partitioned schema + migrations script in \textbf{Django/PostgreSQL}, cutting query latency by \textbf{40\%}}
 \resumeItemListEnd
 
 \resumeSubheading
 {Intuitive Surgical}{Jun 2024 -- Sep 2024}
 {DevOps Engineer Intern}{Sunnyvale, CA}
 \resumeItemListStart
-\resumeItem{Produced Terraform pipelines for AWS infrastructure deployment (ALB, NLB, VPC, etc.) in multi-region setups}
-\resumeItem{Migrated CI/CD pipelines for an internal QA project, streamlining security for an SDLC efficiency increase of \textbf{60\%}}
-\resumeItem{Automated infrastructure deployment and scaling with Terraform, and created AMIs using HashiCorp Packer}
+\resumeItem{Built reusable Terraform modules \textbf{reducing} setup time by \textbf{\textasciitilde95\%} for AWS infra in multi-region environments}
+\resumeItem{Migrated CI/CD from Groovy/Java to GitLab CI YAML, streamlining security for an SDLC efficiency \textbf{increase of 60\%}}
+\resumeItem{Trimmed manual release steps from \textbf{14 $\rightarrow$ 2} with Packer + Terraform CI for AMI building and blue-green rollouts}
 \resumeItemListEnd
 
 \resumeSubheading
 {CITRIS and the Banatao Institute}{May 2024 -- Jul 2024}
 {Data Scientist Intern}{Berkeley, CA}
 \resumeItemListStart
-\resumeItem{Benchmarking and developing LLM tests on a nuclear energy project for an AI/ML Analytics B2B (\href{https://beyondthearc.com}{\underline{Beyond the Arc}})}
-\resumeItem{Tailored web application to produce a \textbf{45\%} increase in efficiency for analyzing regulatory guideline documents}
-\resumeItem{Conducting text mining and chunking for RAG in a Generative AI project along with NLP on technical documents}
+\resumeItem{Benchmarking and developing LLM tests on a nuclear energy project for an AI/ML Analytics B2B (Beyond the Arc)}
+\resumeItem{Engineered text mining pipeline using OpenAI's \textbf{Assistants API}, with \textbf{\textasciitilde92\%} accuracy for document relevance eval}
+\resumeItem{Accelerated regulatory document processing by \textbf{43\%} by parallelizing document processing to the Assistants API}
 \resumeItemListEnd
 
-% \resumeSubheading
-% {UCSC Genomics Institute}{Apr 2024 -- Current}
-% {Undergraduate Research Assistant}{Santa Cruz, CA}
-% \resumeItemListStart
-% \resumeItem{Curated functional code developing artificial/observed datasets through simulating extracellular recordings}
-% \resumeItem{Mentored by Dr. Mircea Teodorescu and compared datasets for a {\textbf{25\%}} increase in neural spike-sorting accuracy}
-% \resumeItem{Leveraged lab AWS S3 buckets and Nautilus clusters with Python for data storage, processing, and analysis}
-% \resumeItem{Formulated schemas for an autonomous agent framework to execute IoT-based wet lab experiments with LLMs}
-% \resumeItemListEnd
+\resumeSubheading
+{UCSC Genomics Institute}{Apr 2024 -- Dec 2024}
+{Undergraduate Research Assistant}{Santa Cruz, CA}
+\resumeItemListStart
+\resumeItem{Mentored by Dr. Teodorescu to use \textbf{MEArec}, \textbf{matplotlib}, and \textbf{numpy} to simulate extracellular recordings}
+\resumeItem{Validated neural spike detection accuracy by comparing ground-truth neuron recordings with AI-sorted clusters, achieving \textbf{\textasciitilde95\%} precision in identifying individual neuron activity patterns; more at \href{https://github.com/braingeneers/MEArec}{\underline{\faGithub{} braingeneers/MEArec}}}
+\resumeItem{Formulated schemas for an autonomous agent framework to execute IoT-based wet lab experiments with LLMs}
+\resumeItemListEnd
 
 \resumeSubHeadingListEnd
 \vspace{-10pt}
@@ -221,7 +220,7 @@
 
 \vspace{-2pt}
 \resumeProjectHeading
-{\textbf{\color[HTML]{000000}\href{https://github.com/SlugTools}{\textcolor{black}{\faGithub}~\underline{SlugTools -- REST API for Aggregated University Data}}} $|$ \emph{Flask + Quart, BeautifulSoup, Gunicorn}}{May 2022}
+{\textbf{\color[HTML]{000000}\href{https://github.com/SlugTools/api}{\textcolor{black}{\faGithub}~\underline{SlugTools -- REST API for Aggregated University Data}}} $|$ \emph{Flask, BeautifulSoup, Gunicorn, Cloudflare}}{May 2022}
 \vspace{2pt}
 \resumeItemListStart
 \resumeItem{Deployed a RESTful API on parsed/scraped university data for course catalog, dining, and facility services}
@@ -231,25 +230,37 @@
 \resumeSubHeadingListEnd
 \vspace{-10pt}
 
-%-----------OTHER---------------
-\section{Other}
-\resumeSubHeadingListStart
-\resumeSubheading{NASA Lucy Pipeline Program}{January 2024}{Mission Concept Academy}{Remote}
-\resumeItemListStart
-\resumeItem{Collaborated with industry experts to develop mission-relevant engineering and project management skills}
-\resumeItem{Directed a mission concept proposal as a team project manager and utilized Siemens NX CAD for rover modeling}
-\resumeItemListEnd
+% %-----------OTHER---------------
+% \section{Other}
+% \resumeSubHeadingListStart
+% \resumeSubheading{NASA Lucy Pipeline Program}{January 2024}{Mission Concept Academy}{Remote}
+% \resumeItemListStart
+% \resumeItem{Collaborated with industry experts to develop mission-relevant engineering and project management skills}
+% \resumeItem{Directed a mission concept proposal as a team project manager and utilized Siemens NX CAD for rover modeling}
+% \resumeItemListEnd
 
-\resumeSubheading{GitHub Campus Expert}{May 2023}{Leadership Program}{Santa Cruz, CA}
-\resumeItemListStart
-\resumeItem{Selected as \textbf{1 of 90} undergraduate students in a competitive pool of over \textbf{6,000} applicants worldwide}
-% \resumeItem{Chosen to represent my university through the platform and introduce students to open-source development}
-\resumeItem{Led workshops on version control and industry practices at Northeastern University -- Silicon Valley Campus}
-% \resumeItem{Uplifted my local community with technical and professional training, mentorship, and support from GitHub}
-\resumeItemListEnd
+% \resumeSubheading{GitHub Campus Expert}{May 2023}{Leadership Program}{Santa Cruz, CA}
+% \resumeItemListStart
+% \resumeItem{Selected as \textbf{1 of 90} undergraduate students in a competitive pool of over \textbf{6,000} applicants worldwide}
+% % \resumeItem{Chosen to represent my university through the platform and introduce students to open-source development}
+% \resumeItem{Led workshops on version control and industry practices at Northeastern University -- Silicon Valley Campus}
+% % \resumeItem{Uplifted my local community with technical and professional training, mentorship, and support from GitHub}
+% \resumeItemListEnd
 
-\resumeSubHeadingListEnd
+% \resumeSubHeadingListEnd
+% \vspace{-10pt}
+
+%-----------LEADERSHIP & AWARDS---------------
+\section{Leadership \& Awards}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+        \textbf{NASA Lucy Pipeline}{: Led a proposal as a project manager within the Mission Concept Academy; used Siemens NX CAD} \\
+        \textbf{GitHub Campus Expert}{: Selected as \textbf{1 of 90} students / \textbf{6,000+} applicants; represented UCSC and intro'd students to OSS} \\
+        }}
+\end{itemize}
 \vspace{-10pt}
+
+
 
 %-----------SKILLS-----------
 \section{Skills}

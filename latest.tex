@@ -85,6 +85,15 @@
     \end{tabular*}\vspace{-7pt}
 }
 
+% Experience heading with 5 params: Company, Duration, Role, Location, Blurb
+\newcommand{\resumeExperience}[5]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} \textit{$|$ #3} & #2 \\
+      \textit{\small #5} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
 \newcommand{\resumeSubSubheading}[2]{
     \item
     \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
@@ -126,7 +135,7 @@
   \href{tel:+12090000000}{\color[HTML]{000000}\underline{(209) XXX-XXXX}} $|$
   \href{https://harshdadhich.com}{\color[HTML]{000000}\underline{harshdadhich.com}} $|$
   \href{https://www.linkedin.com/in/hdadhich01/}{\color[HTML]{000080}{\faLinkedin}~\color[HTML]{000000}\underline{hdadhich01}} $|$
-  \href{https://github.com/hdadhich01}{\color[HTML]{000080}{\faGithub}~\color[HTML]{000000}\underline{hdadhich01}}
+  \href{https://github.com/hdadhich01}{\color[HTML]{000080}{\faGithub}~\color[HTML]{000000}\underline{hdadhich}}
   \vspace{-15pt}
 \end{center}
 
@@ -135,7 +144,7 @@
 \resumeSubHeadingListStart
 
 \resumeSubheading
-{\textit{University of California, Los Angeles}}{Expected 2026}
+{University of California, Los Angeles}{Expected 2026}
 {Master of Engineering: Data Science}{Los Angeles, CA}
 \begin{itemize}[itemsep=-1pt, parsep=1pt]
   \item\small \textbf{Coursework}{: Large-Scale Machine Learning, Big Data Analytics, Reinforcement Learning, Product Management}
@@ -169,36 +178,36 @@
 \section{Work Experience}
 \resumeSubHeadingListStart
 
-\resumeSubheading
+\resumeExperience
 {Dento AI}{Jan 2025 -- Jun 2025}
-{Software Engineer Intern}{San Francisco, CA}
+{Software Engineer Intern}{San Francisco, CA}{FiDi-based startup providing an AI-powered platform for dental professionals}
 \resumeItemListStart
 \resumeItem{Optimized consultation transcription latency by \textbf{35\%} with cient-side audio streaming, achieving speeds \textbf{$\leq$ 5s}}
 \resumeItem{Achieved a \textbf{22x} server-side speedup with bulk transcription processing through \textbf{Deepgram} and multi-threading}
 \resumeItem{Implemented a schema + database partitioning script in \textbf{Django/PostgreSQL}, cutting query latency by \textbf{40\%}}
 \resumeItemListEnd
 
-\resumeSubheading
+\resumeExperience
 {Intuitive Surgical}{Jun 2024 -- Sep 2024}
-{DevOps Engineer Intern}{Sunnyvale, CA}
+{DevOps Engineer Intern}{Sunnyvale, CA}{Industry leader in surgical robotics; AWS Operations Team under the Digital BU}
 \resumeItemListStart
 \resumeItem{Built reusable \textbf{Terraform} modules \textbf{reducing} setup time by \textbf{\textasciitilde90\%} for AWS infra in multi-region environments}
 \resumeItem{Migrated CI/CD from Groovy/Java to GitLab CI YAML, streamlining security for an SDLC efficiency \textbf{increase of 60\%}}
 \resumeItem{Trimmed manual release steps from \textbf{14 $\rightarrow$ 2} with \textbf{Packer} + Terraform CI for AMI building and blue-green rollouts}
 \resumeItemListEnd
 
-\resumeSubheading
+\resumeExperience
 {CITRIS and the Banatao Institute}{May 2024 -- Jul 2024}
-{Data Scientist Intern}{Berkeley, CA}
+{Data Scientist Intern}{Berkeley, CA}{UC-wide research initiative; matched with host comany: Beyond the Arc}
 \resumeItemListStart
-\resumeItem{Benchmarking and developing LLM tests on a nuclear energy project for an AI/ML Analytics B2B (Beyond the Arc)}
+\resumeItem{Benchmarking and developing LLM tests on a nuclear energy project for an AI/ML Analytics B2B company}
 \resumeItem{Engineered text mining pipeline using OpenAI's \textbf{Assistants API}, with \textbf{\textasciitilde92\%} accuracy for content classification}
 \resumeItem{Accelerated regulatory document processing by \textbf{40\%} by parallelizing scraping and calls to the Assistants API}
 \resumeItemListEnd
 
-\resumeSubheading
+\resumeExperience
 {UCSC Genomics Institute}{Apr 2024 -- Dec 2024}
-{Undergraduate Research Assistant}{Santa Cruz, CA}
+{Undergraduate Research Assistant}{Santa Cruz, CA}{Braingeneers Lab -- experimentation with neural organoids; PI: Dr. Mircea Teodorescu}
 \resumeItemListStart
 \resumeItem{Mentored by Dr. Teodorescu to use \textbf{\underline{\href{https://mearec.readthedocs.io/en/latest/}{MEArec}}}, \textbf{matplotlib}, and \textbf{numpy} to simulate extracellular recordings}
 \resumeItem{Validated neural spike detection accuracy by comparing ground-truth neuron recordings with AI-sorted clusters, achieving \textbf{\textasciitilde95\%} precision in identifying individual neuron activity patterns; more at \href{https://github.com/braingeneers/MEArec}{\underline{\faGithub{} braingeneers/MEArec}}}
